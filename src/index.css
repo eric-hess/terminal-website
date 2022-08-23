@@ -1,0 +1,68 @@
+@font-face {
+    font-family: 'CascadiaCode';
+    src: url(./assets/fonts/CascadiaCode.ttf);
+    display: swap;
+}
+
+* {
+    font-family: 'CascadiaCode', monospace;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    margin: 0;
+    background-color: #282828;
+    color: #ebdbb2;
+    padding: 16px;
+}
+
+body {
+    height: 100%;
+    padding: 16px;
+    border: 2px solid;
+    border-color: #d79921;
+    border-radius: 4px;
+}
+
+#root {
+    height: 100%;
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+#root::-webkit-scrollbar { 
+    display: none;
+}
+
+input {
+    background-color: #282828;
+    border: 0 solid;
+    color: #ebdbb2;
+    appearance: auto;
+    outline: none;
+    font-size: 100%;
+    flex-grow: 1;
+}
+
+.input {
+    display: flex;
+    flex-direction: row;
+}
+
+.prompt {
+    margin-right: 8px;
+}
+
+.prompt-user {
+    color: #d79921;
+}
+
+.prompt-host {
+    color: #98971a;
+}
+
+a {
+    color: #ebdbb2;
+}
