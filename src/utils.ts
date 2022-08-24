@@ -19,6 +19,10 @@ export interface Config {
             help: string,
             email: string,
         },
+        echo: {
+            enabled: boolean,
+            help: string
+        },
         date: {
             enabled: boolean,
             help: string

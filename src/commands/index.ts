@@ -3,6 +3,7 @@ import About from './About';
 import APOD from './APOD';
 import Contact from './Contact';
 import Date from './Date';
+import Echo from './Echo';
 import GitHub from './GitHub';
 import Help from './Help';
 import Location from './Location';
@@ -19,6 +20,7 @@ const availableCommands: {[key: string]: Command} = {
     about: new About(),
     apod: new APOD(),
     contact: new Contact(),
+    echo: new Echo(),
     date: new Date(),
     github: new GitHub(),
     help: new Help(),

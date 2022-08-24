@@ -23,6 +23,10 @@
             "enabled": true,
             "help": "displays the current date and time"
         },
+        "echo": {
+            "enabled": true,
+            "help": "write arguments to the standard output"
+        },
         "github": {
             "enabled": true,
             "help": "displays the GitHub profile link of root",
