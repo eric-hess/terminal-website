@@ -73,7 +73,7 @@ const App = () => {
                         <Input
                             promptUsername={config.prompt.username}
                             commandHistory={commandHistory}
-                            availableCommands={Object.keys(availableCommands)}
+                            availableCommands={getEnabledCommands(config)}
                             pushCommand={pushCommand}
                             clearOutput={clearOutput}
                         />
