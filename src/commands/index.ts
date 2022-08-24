@@ -1,5 +1,6 @@
 import { Config } from '../utils';
 import About from './About';
+import APOD from './APOD';
 import Contact from './Contact';
 import Date from './Date';
 import GitHub from './GitHub';
@@ -16,6 +17,7 @@ export interface Command {
 
 const availableCommands: {[key: string]: Command} = {
     about: new About(),
+    apod: new APOD(),
     contact: new Contact(),
     date: new Date(),
     github: new GitHub(),

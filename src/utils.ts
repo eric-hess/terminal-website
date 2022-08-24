@@ -8,6 +8,12 @@ export interface Config {
             help: string,
             value: string   
         },
+        apod: {
+            enabled: boolean,
+            help: string,
+            title: string,
+            description: string
+        },
         contact: {
             enabled: boolean,
             help: string,

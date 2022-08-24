@@ -8,6 +8,12 @@
             "help": "displays some informations about root",
             "value": "I am Eric, a full-stack software developer."
         },
+        "apod": {
+            "enabled": true,
+            "help": "displays the NASA astronomy picture of the day",
+            "title": "Title",
+            "description": "Description"
+        },
         "contact": {
             "enabled": true,
             "help": "displays some contact information about root",
