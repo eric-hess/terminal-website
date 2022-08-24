@@ -1,4 +1,5 @@
 export interface Config {
+    title: string,
     prompt: {
         username: string
     },

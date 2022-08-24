@@ -10,7 +10,10 @@ const App = () => {
     const [outputHistory, setOutputHistory] = React.useState<JSX.Element[]>([]);
     
     React.useEffect(() => {
-        setConfig(loadConfig());
+        const config = loadConfig();
+        setConfig(config);
+
+        document.title = config.title;
     }, []);
 
     const pushCommand = (command: string) => {
