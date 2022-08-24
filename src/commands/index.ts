@@ -4,6 +4,7 @@ import Contact from './Contact';
 import Date from './Date';
 import GitHub from './GitHub';
 import Help from './Help';
+import Location from './Location';
 import UUID from './UUID';
 import Weather from './Weather';
 import WhoAmI from './WhoAmI';
@@ -19,6 +20,7 @@ const availableCommands: {[key: string]: Command} = {
     date: new Date(),
     github: new GitHub(),
     help: new Help(),
+    location: new Location(),
     uuid: new UUID(),
     weather: new Weather(),
     whoami: new WhoAmI()

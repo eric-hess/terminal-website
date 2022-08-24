@@ -26,6 +26,15 @@ export interface Config {
             enabled: boolean,
             help: string
         },
+        location: {
+            enabled: boolean,
+            help: string,
+            ip: string,
+            provider: string,
+            country: string,
+            region: string,
+            city: string
+        },
         uuid: {
             enabled: boolean,
             help: string

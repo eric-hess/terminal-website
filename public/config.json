@@ -26,6 +26,15 @@
             "enabled": true,
             "help": "displays all available commands"
         },
+        "location": {
+            "enabled": true,
+            "help": "displays the current location information by clients ip address",
+            "ip": "IP",
+            "provider": "Provider",
+            "country": "Country",
+            "region": "Region",
+            "city": "City"
+        },
         "uuid": {
             "enabled": true,
             "help": "generate and displays a uuid"
