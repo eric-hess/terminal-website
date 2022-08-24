@@ -1,5 +1,43 @@
 {
-    "about": "I am Eric, a full-stack software developer.",
-    "github": "eric-hess",
-    "whoami": "I can't tell you who you are, but I can tell you who I am. Try the 'about' command."
+    "prompt": {
+        "username": "guest"
+    },
+    "commands": {
+        "about": {
+            "enabled": true,
+            "help": "displays some informations about root",
+            "value": "I am Eric, a full-stack software developer."
+        },
+        "contact": {
+            "enabled": true,
+            "help": "displays some contact information about root",
+            "email": "terminal@e-hess.com"
+        },
+        "date": {
+            "enabled": true,
+            "help": "displays the current date and time"
+        },
+        "github": {
+            "enabled": true,
+            "help": "displays the GitHub profile link of root",
+            "value": "eric-hess"
+        },
+        "help": {
+            "enabled": true,
+            "help": "displays all available commands"
+        },
+        "uuid": {
+            "enabled": true,
+            "help": "generate and displays a uuid"
+        },
+        "weather": {
+            "enabled": true,
+            "help": "displays the current weather at given location e.g. 'weather Berlin'"
+        },
+        "whoami": {
+            "enabled": true,
+            "help": "tells you who you are",
+            "value": "I can't tell you who you are, but I can tell you who I am. Try the 'about' command."
+        }
+    }
 }

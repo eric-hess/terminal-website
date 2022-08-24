@@ -2,6 +2,7 @@ import React from 'react';
 import Prompt from './Prompt';
 
 interface Props {
+    promptUsername: string;
     availableCommands: string[];
     commandHistory: string[];
     pushCommand: (command: string) => void;
@@ -73,7 +74,9 @@ const Input = (props: Props) => {
     
     return (
         <div className="input">
-            <Prompt/>
+            <Prompt
+                username={props.promptUsername}
+            />
             <input
                 ref={inputRef}
                 type="text"
