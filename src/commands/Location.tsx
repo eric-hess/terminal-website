@@ -2,20 +2,33 @@ import { Command } from '.';
 import { Config } from '../utils';
 
 interface Location {
-    as: string;
-    city: string;
-    country: string;
-    countryCode: string;
-    isp: string;
-    lat: number;
-    lon: number;
-    org: string;
-    query: string;
-    region: string;
-    regionName: string;
-    status: string;
-    timezone: string;
-    zip: string;
+    ip: string,
+    network: string,
+    version: string,
+    city: string,
+    region: string,
+    region_code: string,
+    country: string,
+    country_name: string,
+    country_code: string,
+    country_code_iso3: string,
+    country_capital: string,
+    country_tld: string,
+    continent_code: string,
+    in_eu: boolean,
+    postal: string,
+    latitude: number,
+    longitude: number,
+    timezone: string,
+    utc_offset: string,
+    country_calling_code: string,
+    currency: string,
+    currency_name: string,
+    languages: string,
+    country_area: number,
+    country_population: number,
+    asn: string,
+    org: string
 }
 
 class Location implements Command {
@@ -27,14 +40,14 @@ class Location implements Command {
     
     public execute(args: string[], config: Config): JSX.Element {
         const fetch = require('sync-fetch');
-        const location: Location = fetch('http://ip-api.com/json/').json();
+        const location: Location = fetch('https://ipapi.co/json/').json();
 
         return (
             <>
-                <span>{config.commands.location.ip}: {location.query}</span><br/>
-                <span>{config.commands.location.provider}: {location.isp}</span><br/>
-                <span>{config.commands.location.country}: {location.country}</span><br/>
-                <span>{config.commands.location.region}: {location.regionName}</span><br/>
+                <span>{config.commands.location.ip}: {location.ip}</span><br/>
+                <span>{config.commands.location.provider}: {location.org}</span><br/>
+                <span>{config.commands.location.country}: {location.country_name}</span><br/>
+                <span>{config.commands.location.region}: {location.region}</span><br/>
                 <span>{config.commands.location.city}: {location.city}</span><br/>
             </>
         );
