@@ -10,7 +10,7 @@ class Date implements Command {
 
     public execute(args: string[], config: Config): JSX.Element {
         return (
-            <span>{new Date().toString()}</span>
+            <span>{new window.Date().toString()}</span>
         );    
     }
 }
