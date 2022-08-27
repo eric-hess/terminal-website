@@ -2,7 +2,7 @@ import React from 'react';
 import Input from './Input';
 import availableCommands from './commands';
 import Prompt from './Prompt';
-import { Config, getEnabledCommands, loadConfig } from './utils';
+import { Config, getEnabledCommands, loadConfig, setFavicon, setTitle } from './utils';
 
 const App = () => {
     const [config, setConfig] = React.useState<Config|undefined>(undefined);
@@ -13,7 +13,8 @@ const App = () => {
         const config = loadConfig();
         setConfig(config);
 
-        document.title = config.title;
+        setTitle(config.title);
+        setFavicon(config.favicon.href, config.favicon.type);
     }, []);
 
     const pushCommand = (command: string) => {

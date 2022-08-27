@@ -1,5 +1,9 @@
 {
     "title": "e-hess.com",
+    "favicon": {
+        "type": "image/svg+xml",
+        "href": "favicon.svg"
+    },
     "prompt": {
         "username": "guest"
     },

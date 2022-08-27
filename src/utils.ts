@@ -1,5 +1,9 @@
 export interface Config {
     title: string,
+    favicon: {
+        type: string,
+        href: string
+    },
     prompt: {
         username: string
     },
@@ -78,4 +82,16 @@ export const getEnabledCommands = (config: Config): string[] => {
     return Object
             .keys(config.commands)
             .filter(entry => config.commands[entry as keyof typeof config.commands].enabled);
+}
+
+export const setTitle = (title: string): void => {
+    document.title = title;
+} 
+
+export const setFavicon = (href: string, type: string): void => {
+    const favicon = document.createElement('link');
+    favicon.rel = 'icon';
+    favicon.href = href;
+    favicon.type = type;
+    document.getElementsByTagName('head')[0].appendChild(favicon);
 }
