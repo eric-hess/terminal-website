@@ -46,6 +46,10 @@ export interface Config {
             region: string,
             city: string
         },
+        qrcode: {
+            enabled: boolean,
+            help: string
+        },
         uuid: {
             enabled: boolean,
             help: string

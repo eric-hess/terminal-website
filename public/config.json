@@ -46,6 +46,10 @@
             "region": "Region",
             "city": "City"
         },
+        "qrcode": {
+            "enabled": true,
+            "help": "generate a qrcode for a given url e.g. 'qrcode https://google.com/'"
+        },
         "uuid": {
             "enabled": true,
             "help": "generate and displays a uuid"

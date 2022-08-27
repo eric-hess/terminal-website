@@ -7,6 +7,7 @@ import Echo from './Echo';
 import GitHub from './GitHub';
 import Help from './Help';
 import Location from './Location';
+import QRCode from './QRCode';
 import UUID from './UUID';
 import Weather from './Weather';
 import WhoAmI from './WhoAmI';
@@ -25,6 +26,7 @@ const availableCommands: {[key: string]: Command} = {
     github: new GitHub(),
     help: new Help(),
     location: new Location(),
+    qrcode: new QRCode(),
     uuid: new UUID(),
     weather: new Weather(),
     whoami: new WhoAmI()
