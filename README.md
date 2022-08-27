@@ -9,13 +9,13 @@
 ### Using docker
 
 ```bash
-docker run -it --rm -p 8080:80 ghcr.io/eric-hess/terminal-website:0.2.0
+docker run -it --rm -p 8080:80 ghcr.io/eric-hess/terminal-website:0.3.0
 ```
 
 If you want to use your own configuration (so you can replace e.g. the contact informations or disable some commands), make sure you mount a own version of the `config.json` in the container.
 
 ```bash
-docker run -it --rm -p 8080:80 -v $PWD/config.json:/opt/terminal/config.json ghcr.io/eric-hess/terminal-website:0.2.0
+docker run -it --rm -p 8080:80 -v $PWD/config.json:/opt/terminal/config.json ghcr.io/eric-hess/terminal-website:0.3.0
 ```
 
 ### Using npm
@@ -38,6 +38,7 @@ This is the default `config.json` file. Feel free to customize it for your needs
 
 ```json
 {
+    "title": "e-hess.com",
     "prompt": {
         "username": "guest"
     },
@@ -46,6 +47,12 @@ This is the default `config.json` file. Feel free to customize it for your needs
             "enabled": true,
             "help": "displays some informations about root",
             "value": "I am Eric, a full-stack software developer."
+        },
+        "apod": {
+            "enabled": true,
+            "help": "displays the NASA astronomy picture of the day",
+            "title": "Title",
+            "description": "Description"
         },
         "contact": {
             "enabled": true,
@@ -56,6 +63,10 @@ This is the default `config.json` file. Feel free to customize it for your needs
             "enabled": true,
             "help": "displays the current date and time"
         },
+        "echo": {
+            "enabled": true,
+            "help": "write arguments to the standard output"
+        },
         "github": {
             "enabled": true,
             "help": "displays the GitHub profile link of root",
@@ -64,6 +75,19 @@ This is the default `config.json` file. Feel free to customize it for your needs
         "help": {
             "enabled": true,
             "help": "displays all available commands"
+        },
+        "location": {
+            "enabled": true,
+            "help": "displays the current location information by clients ip address",
+            "ip": "IP",
+            "provider": "Provider",
+            "country": "Country",
+            "region": "Region",
+            "city": "City"
+        },
+        "qrcode": {
+            "enabled": true,
+            "help": "generate a qrcode for a given url e.g. 'qrcode https://google.com/'"
         },
         "uuid": {
             "enabled": true,
