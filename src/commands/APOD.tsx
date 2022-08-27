@@ -22,8 +22,6 @@ class APOD implements Command {
         const fetch = require('sync-fetch');
         const response: Response = fetch('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY').json();
 
-        console.log(response);
-
         return (
             <>
                 <span>{config.commands.apod.title}: {response.title}</span><br/>
