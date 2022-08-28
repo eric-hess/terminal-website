@@ -4,6 +4,15 @@
         "type": "image/svg+xml",
         "href": "favicon.svg"
     },
+    "theme": {
+        "backgroundColor": "#282828",
+        "borderColor": "#d79921",
+        "textColor": "#ebdbb2",
+        "promptUserTextColor": "#d79921",
+        "promptHostTextColor": "#98971a",
+        "linkColor": "#ebdbb2",
+        "inputTextColor": "#ebdbb2"
+    },
     "prompt": {
         "username": "guest"
     },

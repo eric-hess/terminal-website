@@ -1,3 +1,4 @@
+import {Box, Input as MuiInput } from '@mui/material';
 import React from 'react';
 import Prompt from './Prompt';
 
@@ -5,6 +6,9 @@ interface Props {
     promptUsername: string;
     availableCommands: string[];
     commandHistory: string[];
+    promptUsernameTextColor: string;
+    promptHostTextColor: string;
+    inputTextColor: string;
     pushCommand: (command: string) => void;
     clearOutput: () => void;
 };
@@ -73,11 +77,27 @@ const Input = (props: Props) => {
     };
     
     return (
-        <div className="input">
+        <Box
+            sx={{
+                display: 'flex',
+                flexDirection: 'row'
+            }}
+        >
             <Prompt
                 username={props.promptUsername}
+                usernameTextColor={props.promptUsernameTextColor}
+                hostTextColor={props.promptHostTextColor}
             />
-            <input
+            <MuiInput
+                sx={{
+                    color: props.inputTextColor,
+                    fontFamily: 'CascadiaCode',
+                    appearance: 'auto',
+                    fontSize: '100%',
+                    flexGrow: '1',
+                    height: '19px'
+                }}
+                disableUnderline
                 ref={inputRef}
                 type="text"
                 autoComplete="off"
@@ -88,7 +108,7 @@ const Input = (props: Props) => {
                 value={inputValue}
                 onChange={(event) => setInputValue(event.target.value)}
             />
-        </div>
+        </Box>
     );
 };
 

@@ -4,6 +4,15 @@ export interface Config {
         type: string,
         href: string
     },
+    theme: {
+        backgroundColor: string,
+        borderColor: string,
+        textColor: string,
+        promptUserTextColor: string,
+        promptHostTextColor: string,
+        linkColor: string,
+        inputTextColor: string
+    },
     prompt: {
         username: string
     },
