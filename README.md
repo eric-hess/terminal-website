@@ -9,13 +9,13 @@
 ### Using docker
 
 ```bash
-docker run -it --rm -p 8080:80 ghcr.io/eric-hess/terminal-website:0.3.1
+docker run -it --rm -p 8080:80 ghcr.io/eric-hess/terminal-website:0.4.0
 ```
 
 If you want to use your own configuration (so you can replace e.g. the contact informations or disable some commands), make sure you mount a own version of the `config.json` in the container.
 
 ```bash
-docker run -it --rm -p 8080:80 -v $PWD/config.json:/opt/terminal/config.json ghcr.io/eric-hess/terminal-website:0.3.1
+docker run -it --rm -p 8080:80 -v $PWD/config.json:/opt/terminal/config.json ghcr.io/eric-hess/terminal-website:0.4.0
 ```
 
 ### Using npm
@@ -39,6 +39,19 @@ This is the default `config.json` file. Feel free to customize it for your needs
 ```json
 {
     "title": "e-hess.com",
+    "favicon": {
+        "type": "image/svg+xml",
+        "href": "favicon.svg"
+    },
+    "theme": {
+        "backgroundColor": "#282828",
+        "borderColor": "#d79921",
+        "textColor": "#ebdbb2",
+        "promptUserTextColor": "#d79921",
+        "promptHostTextColor": "#98971a",
+        "linkColor": "#ebdbb2",
+        "inputTextColor": "#ebdbb2"
+    },
     "prompt": {
         "username": "guest"
     },
