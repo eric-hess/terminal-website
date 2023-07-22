@@ -2,8 +2,6 @@
 
 ![screenshot](./docs/screenshot.png)
 
-[Example (https://e-hess.com)](https://e-hess.com)
-
 ## Quick Start
 
 ### Using docker
